@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: moto-servicio
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:7004
