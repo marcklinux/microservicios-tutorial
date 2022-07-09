@@ -13,7 +13,7 @@ spring:
   cloud:
     gateway:
       discovery:
-        localtor:
+        locator:
           enabled: true
       routes:
         - id: usuario-service
