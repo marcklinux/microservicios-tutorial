@@ -1,0 +1,32 @@
+server:
+  port: 7006
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        localtor:
+          enabled: true
+      routes:
+        - id: usuario-service
+          uri: lb://usuario-service
+          predicates:
+            - Path=/usuario/**
+        - id: carro-servicio
+          uri: lb://carro-servicio
+          predicates:
+            - Path=/carro/**
+        - id: moto-servicio
+          uri: lb://moto-servicio
+          predicates:
+            - Path=/moto/**
+          
+
