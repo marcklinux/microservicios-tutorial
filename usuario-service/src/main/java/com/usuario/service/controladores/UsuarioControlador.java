@@ -117,7 +117,7 @@ public class UsuarioControlador {
 
 	private ResponseEntity<Moto> fallBackSaveMoto(@PathVariable("usuarioId") int id, @RequestBody Moto moto,
 			RuntimeException excepcion) {
-		return new ResponseEntity("El usuario :" + id + " no tiene dinero para los mtos", HttpStatus.OK);
+		return new ResponseEntity("El usuario :" + id + " no tiene dinero para los motos", HttpStatus.OK);
 	}
 
 	private ResponseEntity<Map<String,Object>> fallBackGetTodos(@PathVariable("usuarioId") int id,
