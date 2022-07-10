@@ -79,7 +79,7 @@ public class UsuarioServicio {
 		Usuario usuario = usuarioRepositorio.findById(usuarioId).orElse(null);
 		
 		if(usuario == null) {
-			resultado.put("Mensaje", "el usuario no exitse");
+			resultado.put("Mensaje", "el usuario no existe");
 			return resultado;
 		}
 		
